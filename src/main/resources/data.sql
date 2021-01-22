@@ -1,11 +1,20 @@
 insert into sensor_definition(id, name,distirict,city)
 values(101, 'SensorSpain',' Gràcia, Eixample','Barcelona');
 
+insert into sensor_roles(id, sensor_def_id,role)
+values(101, 101,'SensorSpain');
+
 insert into sensor_definition(id, name,distirict,city)
 values(102, 'SensorAustria',' Währing, Penzing','Wien');
 
+insert into sensor_roles(id, sensor_def_id,role)
+values(102, 102,'SensorAustria');
+
 insert into sensor_definition(id, name,distirict,city)
 values(103, 'SensorGermany','Maxvorstadt','München');
+
+insert into sensor_roles(id, sensor_def_id,role)
+values(103, 103,'SensorGermany');
 
 
 insert into sensor_corbon_level(id, sensor_def_id,cycle_value,trend_value,time)

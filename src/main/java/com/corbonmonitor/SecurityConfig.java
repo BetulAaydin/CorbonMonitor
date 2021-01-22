@@ -31,11 +31,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	                .httpBasic()
 	                .and()
 	                .authorizeRequests()
-	                .antMatchers(HttpMethod.GET, "/hello/**").permitAll()
+	                .antMatchers(HttpMethod.GET, "/sensors/**").permitAll()
 	                .antMatchers(HttpMethod.GET, "/h2-console/**").permitAll()	               
-	                .antMatchers(HttpMethod.GET, "/sensors/**").hasRole("ADMIN")
+	                .antMatchers(HttpMethod.GET, "//sensor-co2/**").hasAnyRole("SensorSpain","SensorAustria","SensorAustria")
 	                .and()
-	                .csrf().disable();
+	                .csrf().disable()
+	                .headers().frameOptions().disable();
 	              
 	    }
 
