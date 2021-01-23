@@ -14,6 +14,10 @@
    http://localhost:4040/h2-console
    JDBC URL:jdbc:h2:file:~/test
 ```
+## Run The Project
+  mvn spring-boot:run
+    or
+  Run com.corbonmonitor.services.FetchSensorCorbonConcentrationService as a Java Application.
 
 ## Definition
  -End point:http://localhost:4040
