@@ -17,6 +17,8 @@
 
 ## Definition
  -End point:http://localhost:4040
+ 
+ Run com.corbonmonitor.services.FetchSensorCorbonConcentrationService as a Java Application.
 
 I assume that 3 sensor were established in provinces are listed below;
 ```txt
