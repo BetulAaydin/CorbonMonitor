@@ -33,7 +33,7 @@ public class FetchSensorCorbonConcentrationService {
 	 
 	 /*We asume that the carbon concertrations will be collected from sensors for each 5 minutes,
 	 the data may be processed to digital in different systems and this systems provide services to fetch them. */
-	@Scheduled(fixedRate = 300000)  // every 30 seconds
+	@Scheduled(fixedRate = 300000)  // every 5 minute
 	  public void fetchSensorCorbonConcentration() {	
 		    this.generateDummyData("SensorSpain");	
 			this.generateDummyData("SensorAustria");	

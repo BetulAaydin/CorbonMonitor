@@ -1,15 +1,5 @@
 # CorbonMonitor
 # Carbon concentration rest apis for each defined province's sensor
-## Definition
--End point:http://localhost:5000
--I assume that 3 sensor were established in provinces are listed below;
-```txt
-   Barcelona: Gràcia, Eixample 
-   Wien: Währing, 
-   Penzing München: Maxvorstadt
- ```
- -I assume that there is a legacy systems which are collect data from sensors and transform them for digital environment. In these way CorbonMonitor project is calling these system to get digital data from each sensors.
-  Due to we dont have any rest apis from these legacy systems which we assumed for,I generate dummy data and scheduled it on the  ConcentrationService.java class.
 
 ## Using Technologies
 ```txt
@@ -24,11 +14,35 @@
    http://localhost:4040/h2-console
    JDBC URL:jdbc:h2:file:~/test
 ```
+
+## Definition
+ -End point:http://localhost:4040
+
+I assume that 3 sensor were established in provinces are listed below;
+```txt
+   Barcelona: Gràcia, Eixample 
+   Wien: Währing, 
+   Penzing München: Maxvorstadt
+ ```
+ -I assume that there is a legacy systems which are collect data from sensors and transform them for digital environment. In these way CorbonMonitor project is calling these system to get digital data from each sensors.
+  Due to we dont have any rest apis from these legacy systems which we assumed for,I generate dummy data and scheduled it on java classes below;
+
+```txt
+   FetchSensorCorbonConcentrationService.java 
+      @Scheduled(fixedRate = 300000)  // every 5 minute
+	  public void fetchSensorCorbonConcentration() {	
+		    this.generateDummyData("SensorSpain");	
+			this.generateDummyData("SensorAustria");	
+			this.generateDummyData("SensorGermany");		
+	  } 
+```
+
 ## Get Defined Senonsors
 
-### All senosrs
+### All senosors
+```txt
 - curl http://localhost:4040/sensors -u admin:password
-
+```
 ```json
 [
     {
@@ -52,7 +66,9 @@
 ]
 ```
 ### sensor by id
+```txt
 -curl http://localhost:4040/sensors/101 -u admin:password
+```
 
 ```json
 [
@@ -72,9 +88,9 @@
 ## Retrive Sensor Carbon Concentration between specific dates from each province
 
 ### retrive carbon concentration from sensor of Barcelona: Gràcia, Eixample 
-
+```txt
 -curl -d '{"startDate":"2021-02-01 08:00:42","endDate":"2021-02-01 08:10:42"}'    -H "Content-Type: application/json"   http://localhost:4040/sensor-co2 -u sensor1:password
-
+```
 ```json
 {
     "result_code": "200 OK",
@@ -280,16 +296,17 @@
 ```
 
 ### retrive carbon concentration from sensor of  Wien: Währing, 
-
-
+```txt
 -curl -d '{"startDate":"2021-02-01 08:00:42","endDate":"2021-02-01 08:10:42"}'    -H "Content-Type: application/json"   http://localhost:4040/sensor-co2 -u sensor2:password
-
+```
 
 
 ### retrive carbon concentration from sensor of  Wien: Währing, 
-   Penzing München: Maxvorstadt 
-
+```txt
 -curl -d '{"startDate":"2021-02-01 08:00:42","endDate":"2021-02-01 08:10:42"}'    -H "Content-Type: application/json"   http://localhost:4040/sensor-co2 -u sensor3:password
+```
 
-
-
+#NOTE
+```txt
+There is a postman import file with CarbonConcentration.postman_collection.json name, ıf you would you can import this file on your postman and call services.
+```
