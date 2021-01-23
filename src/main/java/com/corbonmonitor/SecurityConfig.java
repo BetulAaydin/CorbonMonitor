@@ -31,7 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	                .httpBasic()
 	                .and()
 	                .authorizeRequests()
-	                .antMatchers(HttpMethod.GET, "/sensors/**").permitAll()
+	                .antMatchers(HttpMethod.GET, "/sensors/**").hasAnyRole("ADMIN")
 	                .antMatchers(HttpMethod.GET, "/h2-console/**").permitAll()	               
 	                .antMatchers(HttpMethod.GET, "//sensor-co2/**").hasAnyRole("SensorSpain","SensorAustria","SensorAustria")
 	                .and()

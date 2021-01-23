@@ -1,0 +1,114 @@
+{
+	"id": "6fc49943-f0f0-226c-235d-7f066521b659",
+	"name": "CarbonConcentration",
+	"description": "",
+	"order": [
+		"35de1a35-a504-8d2d-d8cf-907950bff21e",
+		"9285ebc0-cd5e-5e2e-e960-6fbdc72953d9",
+		"5189b000-7321-11c3-8489-b9287076b335"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1611413446912,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "35de1a35-a504-8d2d-d8cf-907950bff21e",
+			"headers": "Authorization: Basic YWRtaW46cGFzc3dvcmQ=\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic YWRtaW46cGFzc3dvcmQ=",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:4040/sensors/101",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "6fc49943-f0f0-226c-235d-7f066521b659",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:4040/sensors/101",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1611413466661,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "5189b000-7321-11c3-8489-b9287076b335",
+			"headers": "Authorization: Basic c2Vuc29yMzpwYXNzd29yZA==\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic c2Vuc29yMzpwYXNzd29yZA==",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:4040/sensor-co2",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "6fc49943-f0f0-226c-235d-7f066521b659",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://localhost:4040/sensor-co2",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1611413526521,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\"startDate\":\"2021-02-01 08:00:42\",\n\"endDate\":\"2021-02-01 08:10:42\"\n}"
+		},
+		{
+			"id": "9285ebc0-cd5e-5e2e-e960-6fbdc72953d9",
+			"headers": "Authorization: Basic YWRtaW46cGFzc3dvcmQ=\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic YWRtaW46cGFzc3dvcmQ=",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:4040/sensors",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "6fc49943-f0f0-226c-235d-7f066521b659",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:4040/sensors",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1611413484489,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
