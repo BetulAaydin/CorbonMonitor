@@ -114,6 +114,6 @@ public class CorbonMonitorController {
 		} catch (DateTimeParseException e) {
 			throw new DateFormatException("Date format must be yyyy-MM-dd HH:mm:ss");
 		}
-		return Timestamp.valueOf(LocalDateTime.parse(timestampAsString, formatter));
+		return Timestamp.valueOf(LocalDateTime.parse(timestampAsString, DATEFORMATTER));
 	}
 }
